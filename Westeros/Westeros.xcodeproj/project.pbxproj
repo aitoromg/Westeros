@@ -10,7 +10,9 @@
 		4B2650D02141B36600369C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650CF2141B36600369C82 /* AppDelegate.swift */; };
 		4B2650D72141B36700369C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2650D62141B36700369C82 /* Assets.xcassets */; };
 		4B2650DA2141B36700369C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2650D82141B36700369C82 /* LaunchScreen.storyboard */; };
-		4B2650E52141B36700369C82 /* WesterosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650E42141B36700369C82 /* WesterosTests.swift */; };
+		4B2650F02141BBE300369C82 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650EF2141BBE300369C82 /* HouseTests.swift */; };
+		4B2650F32141BD9300369C82 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F22141BD9300369C82 /* House.swift */; };
+		4B2650F52141C21800369C82 /* Sigil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F42141C21800369C82 /* Sigil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +32,10 @@
 		4B2650D92141B36700369C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B2650DB2141B36700369C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B2650E02141B36700369C82 /* WesterosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WesterosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B2650E42141B36700369C82 /* WesterosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WesterosTests.swift; sourceTree = "<group>"; };
 		4B2650E62141B36700369C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B2650EF2141BBE300369C82 /* HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
+		4B2650F22141BD9300369C82 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		4B2650F42141C21800369C82 /* Sigil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sigil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		4B2650CE2141B36600369C82 /* Westeros */ = {
 			isa = PBXGroup;
 			children = (
+				4B2650F12141BD7300369C82 /* Domain */,
 				4B2650CF2141B36600369C82 /* AppDelegate.swift */,
 				4B2650D62141B36700369C82 /* Assets.xcassets */,
 				4B2650D82141B36700369C82 /* LaunchScreen.storyboard */,
@@ -84,10 +89,19 @@
 		4B2650E32141B36700369C82 /* WesterosTests */ = {
 			isa = PBXGroup;
 			children = (
-				4B2650E42141B36700369C82 /* WesterosTests.swift */,
 				4B2650E62141B36700369C82 /* Info.plist */,
+				4B2650EF2141BBE300369C82 /* HouseTests.swift */,
 			);
 			path = WesterosTests;
+			sourceTree = "<group>";
+		};
+		4B2650F12141BD7300369C82 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4B2650F22141BD9300369C82 /* House.swift */,
+				4B2650F42141C21800369C82 /* Sigil.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +157,7 @@
 					};
 					4B2650DF2141B36700369C82 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = 4B2650CB2141B36500369C82;
 					};
 				};
@@ -190,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2650F52141C21800369C82 /* Sigil.swift in Sources */,
+				4B2650F32141BD9300369C82 /* House.swift in Sources */,
 				4B2650D02141B36600369C82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B2650E52141B36700369C82 /* WesterosTests.swift in Sources */,
+				4B2650F02141BBE300369C82 /* HouseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +398,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
 				INFOPLIST_FILE = WesterosTests/Info.plist;
@@ -391,6 +409,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.WesterosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Westeros.app/Westeros";
@@ -402,6 +421,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
 				INFOPLIST_FILE = WesterosTests/Info.plist;
