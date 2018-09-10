@@ -13,6 +13,8 @@
 		4B2650F02141BBE300369C82 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650EF2141BBE300369C82 /* HouseTests.swift */; };
 		4B2650F32141BD9300369C82 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F22141BD9300369C82 /* House.swift */; };
 		4B2650F52141C21800369C82 /* Sigil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F42141C21800369C82 /* Sigil.swift */; };
+		4B2650F72141C8C400369C82 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F62141C8C400369C82 /* PersonTests.swift */; };
+		4B2650F92141C91100369C82 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F82141C91100369C82 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		4B2650EF2141BBE300369C82 /* HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
 		4B2650F22141BD9300369C82 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		4B2650F42141C21800369C82 /* Sigil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sigil.swift; sourceTree = "<group>"; };
+		4B2650F62141C8C400369C82 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		4B2650F82141C91100369C82 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			children = (
 				4B2650E62141B36700369C82 /* Info.plist */,
 				4B2650EF2141BBE300369C82 /* HouseTests.swift */,
+				4B2650F62141C8C400369C82 /* PersonTests.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			children = (
 				4B2650F22141BD9300369C82 /* House.swift */,
 				4B2650F42141C21800369C82 /* Sigil.swift */,
+				4B2650F82141C91100369C82 /* Person.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 				4B2650F52141C21800369C82 /* Sigil.swift in Sources */,
 				4B2650F32141BD9300369C82 /* House.swift in Sources */,
 				4B2650D02141B36600369C82 /* AppDelegate.swift in Sources */,
+				4B2650F92141C91100369C82 /* Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2650F02141BBE300369C82 /* HouseTests.swift in Sources */,
+				4B2650F72141C8C400369C82 /* PersonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
