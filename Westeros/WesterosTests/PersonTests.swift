@@ -35,5 +35,17 @@ class PersonTests: XCTestCase {
         XCTAssertEqual(ned.fullName, "Eddard Stark")
         XCTAssertEqual(arya.fullName, "Arya Stark")
     }
+    
+    func testPersonEquality() {
+        // 1. Identidad
+        XCTAssertEqual(ned, ned)
+        
+        // 2. Igualdad
+        let eddard = Person(name: "Eddard", alias: "Ned", house: starkHouse)
+        XCTAssertEqual(eddard, ned)
+        
+        // 3. Desigualdad
+        XCTAssertNotEqual(ned, arya)
+    }
 
 }
