@@ -23,11 +23,16 @@ class HouseTests: XCTestCase {
     
     
     override func setUp() {
-        starkSigil = Sigil(image: UIImage(), description: "Lobo Huargo")
-        lannisterSigil = Sigil(image: UIImage(), description: "Leon Rampante")
+
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno")
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido")
+        starkSigil = Sigil(image: UIImage(named: "codeIsComing.png")!, description: "Lobo Huargo")
+        lannisterSigil = Sigil(image: UIImage(named: "lannister.jpg")!, description: "Leon Rampante")
+        
+        let starkUrl = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
+        let lannisterUrl = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
+        
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno", url: starkUrl)
+        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido", url: lannisterUrl)
         
         robb = Person(name: "Robb", alias: "El joven Lobo", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)
@@ -70,12 +75,20 @@ class HouseTests: XCTestCase {
         XCTAssertEqual(starkHouse.count, 2)
     }
     
+    func testHouse_AddPersonsAtATime_ReturnsTheCorrectCountOfPersons() {
+        XCTAssertEqual(starkHouse.count, 0)
+        starkHouse.add(persons: robb, arya, tyrion)
+        
+        XCTAssertEqual(starkHouse.count, 2)
+    }
+    
     func testHouseEquality() {
         // 1. Identidad
         XCTAssertEqual(starkHouse, starkHouse)
         
         // 2. Igualdad
-        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno")
+        let starkUrl = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
+        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno", url: starkUrl)
         XCTAssertEqual(jinxed, starkHouse)
         
         // 3. Desigualdad

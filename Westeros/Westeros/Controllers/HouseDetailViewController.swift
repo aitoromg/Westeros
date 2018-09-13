@@ -52,6 +52,4 @@ class HouseDetailViewController: UIViewController {
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
     }
-    
-
 }
