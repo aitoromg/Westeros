@@ -19,15 +19,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .cyan
         
-        // 1. Creamos el modelo
-        let starkSigil = Sigil(image: UIImage(named: "codeIsComing.png")!, description: "Lobo Huargo")
-        let starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno")
+        // 1. Creamo el modelos
+        let houses = Repository.local.houses
         
-        // 2. Creamos el controlador
-        let starkViewController = HouseDetailViewController(model: starkHouse)
+        // 2. Creamos los controladores
+        var controllers = [UIViewController]()
+        
+        for house in houses {
+            controllers.append(HouseDetailViewController(model: house).wrappedInNavigation())
+        }
+        
+        // Creamos el combinador
+        let tabBarViewController = UITabBarController()
+        tabBarViewController.viewControllers = controllers
+        
         
         // Asignamos el rootVC
-        window?.rootViewController = starkViewController
+        window?.rootViewController = tabBarViewController
         
         window?.makeKeyAndVisible()
         return true

@@ -20,6 +20,9 @@
 		4B66C8362149A1AC00961791 /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B66C8342149A1AC00961791 /* targaryenSmall.jpg */; };
 		4B66C83B2149A31E00961791 /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66C8392149A31E00961791 /* HouseDetailViewController.swift */; };
 		4B66C83C2149A31E00961791 /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B66C83A2149A31E00961791 /* HouseDetailViewController.xib */; };
+		4B88F82D2149B9F10062C3AA /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F82C2149B9F10062C3AA /* UIViewController+Navigation.swift */; };
+		4B88F82F2149BBF20062C3AA /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F82E2149BBF20062C3AA /* RepositoryTests.swift */; };
+		4B88F8322149BCBB0062C3AA /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F8312149BCBB0062C3AA /* Respository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,10 @@
 		4B66C8342149A1AC00961791 /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		4B66C8392149A31E00961791 /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		4B66C83A2149A31E00961791 /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
+		4B88F82C2149B9F10062C3AA /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		4B88F82E2149BBF20062C3AA /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		4B88F8312149BCBB0062C3AA /* Respository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
+		4B88F8332149C4040062C3AA /* FuncionesDeAltoNivelYClausuras.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FuncionesDeAltoNivelYClausuras.playground; path = ../FuncionesDeAltoNivelYClausuras.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,7 @@
 		4B2650C32141B36500369C82 = {
 			isa = PBXGroup;
 			children = (
+				4B88F8332149C4040062C3AA /* FuncionesDeAltoNivelYClausuras.playground */,
 				4B2650CE2141B36600369C82 /* Westeros */,
 				4B2650E32141B36700369C82 /* WesterosTests */,
 				4B2650CD2141B36600369C82 /* Products */,
@@ -91,6 +99,7 @@
 		4B2650CE2141B36600369C82 /* Westeros */ = {
 			isa = PBXGroup;
 			children = (
+				4B88F82B2149B9A10062C3AA /* Additions */,
 				4B66C8382149A29800961791 /* Controllers */,
 				4B66C8372149A1C700961791 /* Resources */,
 				4B2650F12141BD7300369C82 /* Domain */,
@@ -108,6 +117,7 @@
 				4B2650E62141B36700369C82 /* Info.plist */,
 				4B2650EF2141BBE300369C82 /* HouseTests.swift */,
 				4B2650F62141C8C400369C82 /* PersonTests.swift */,
+				4B88F82E2149BBF20062C3AA /* RepositoryTests.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -115,6 +125,7 @@
 		4B2650F12141BD7300369C82 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				4B88F8302149BCA90062C3AA /* Repositories */,
 				4B2650F22141BD9300369C82 /* House.swift */,
 				4B2650F42141C21800369C82 /* Sigil.swift */,
 				4B2650F82141C91100369C82 /* Person.swift */,
@@ -139,6 +150,22 @@
 				4B66C83A2149A31E00961791 /* HouseDetailViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4B88F82B2149B9A10062C3AA /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				4B88F82C2149B9F10062C3AA /* UIViewController+Navigation.swift */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		4B88F8302149BCA90062C3AA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4B88F8312149BCBB0062C3AA /* Respository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B88F82D2149B9F10062C3AA /* UIViewController+Navigation.swift in Sources */,
 				4B66C83B2149A31E00961791 /* HouseDetailViewController.swift in Sources */,
+				4B88F8322149BCBB0062C3AA /* Respository.swift in Sources */,
 				4B2650F52141C21800369C82 /* Sigil.swift in Sources */,
 				4B2650F32141BD9300369C82 /* House.swift in Sources */,
 				4B2650D02141B36600369C82 /* AppDelegate.swift in Sources */,
@@ -260,6 +289,7 @@
 			files = (
 				4B2650F02141BBE300369C82 /* HouseTests.swift in Sources */,
 				4B2650F72141C8C400369C82 /* PersonTests.swift in Sources */,
+				4B88F82F2149BBF20062C3AA /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
