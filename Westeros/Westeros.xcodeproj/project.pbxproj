@@ -15,6 +15,10 @@
 		4B2650F52141C21800369C82 /* Sigil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F42141C21800369C82 /* Sigil.swift */; };
 		4B2650F72141C8C400369C82 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F62141C8C400369C82 /* PersonTests.swift */; };
 		4B2650F92141C91100369C82 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2650F82141C91100369C82 /* Person.swift */; };
+		4B422D652150336A00B44286 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B422D632150336A00B44286 /* WikiViewController.swift */; };
+		4B422D662150336A00B44286 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B422D642150336A00B44286 /* WikiViewController.xib */; };
+		4B422D69215059D000B44286 /* HouseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B422D67215059D000B44286 /* HouseListViewController.swift */; };
+		4B422D6A215059D000B44286 /* HouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B422D68215059D000B44286 /* HouseListViewController.xib */; };
 		4B66C8322149A18700961791 /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B66C8312149A18700961791 /* codeIsComing.png */; };
 		4B66C8352149A1AC00961791 /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B66C8332149A1AC00961791 /* lannister.jpg */; };
 		4B66C8362149A1AC00961791 /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B66C8342149A1AC00961791 /* targaryenSmall.jpg */; };
@@ -48,6 +52,10 @@
 		4B2650F42141C21800369C82 /* Sigil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sigil.swift; sourceTree = "<group>"; };
 		4B2650F62141C8C400369C82 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		4B2650F82141C91100369C82 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4B422D632150336A00B44286 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		4B422D642150336A00B44286 /* WikiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
+		4B422D67215059D000B44286 /* HouseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListViewController.swift; sourceTree = "<group>"; };
+		4B422D68215059D000B44286 /* HouseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseListViewController.xib; sourceTree = "<group>"; };
 		4B66C8312149A18700961791 /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
 		4B66C8332149A1AC00961791 /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		4B66C8342149A1AC00961791 /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 			children = (
 				4B66C8392149A31E00961791 /* HouseDetailViewController.swift */,
 				4B66C83A2149A31E00961791 /* HouseDetailViewController.xib */,
+				4B422D632150336A00B44286 /* WikiViewController.swift */,
+				4B422D642150336A00B44286 /* WikiViewController.xib */,
+				4B422D67215059D000B44286 /* HouseListViewController.swift */,
+				4B422D68215059D000B44286 /* HouseListViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B66C8352149A1AC00961791 /* lannister.jpg in Resources */,
+				4B422D662150336A00B44286 /* WikiViewController.xib in Resources */,
 				4B66C8362149A1AC00961791 /* targaryenSmall.jpg in Resources */,
+				4B422D6A215059D000B44286 /* HouseListViewController.xib in Resources */,
 				4B66C83C2149A31E00961791 /* HouseDetailViewController.xib in Resources */,
 				4B66C8322149A18700961791 /* codeIsComing.png in Resources */,
 				4B2650DA2141B36700369C82 /* LaunchScreen.storyboard in Resources */,
@@ -279,7 +293,9 @@
 				4B2650F52141C21800369C82 /* Sigil.swift in Sources */,
 				4B2650F32141BD9300369C82 /* House.swift in Sources */,
 				4B2650D02141B36600369C82 /* AppDelegate.swift in Sources */,
+				4B422D652150336A00B44286 /* WikiViewController.swift in Sources */,
 				4B2650F92141C91100369C82 /* Person.swift in Sources */,
+				4B422D69215059D000B44286 /* HouseListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

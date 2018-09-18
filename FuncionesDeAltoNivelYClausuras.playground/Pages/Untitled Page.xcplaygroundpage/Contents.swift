@@ -85,7 +85,9 @@ evens.sorted(by: { (a: Int, b: Int) -> Bool in
 evens
 
 // Trailing clousure
-var result = evens.sorted { $1 > $0 }
+var result = evens.sorted {
+    $1 > $0
+}
 
 result
 

@@ -50,5 +50,9 @@ class PersonTests: XCTestCase {
         // 3. Desigualdad
         XCTAssertNotEqual(ned, arya)
     }
+    
+    func testPersonComparison() {
+        XCTAssertGreaterThan(ned, arya)
+    }
 
 }

@@ -22,20 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 1. Creamo el modelos
         let houses = Repository.local.houses
         
-        // 2. Creamos los controladores
-        // Queremos transformar un array de House en un array de HouseDetailVC
-        let controllers = houses.map {
-            HouseDetailViewController(model: $0).wrappedInNavigation()
-        }
-        
-        
-        // Creamos el combinador
-        let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = controllers
-        
+        // Crear la tabla (lista)
+        let houseListViewController = HouseListViewController(model: houses)
         
         // Asignamos el rootVC
-        window?.rootViewController = tabBarViewController
+        window?.rootViewController = houseListViewController.wrappedInNavigation()
         
         window?.makeKeyAndVisible()
         return true

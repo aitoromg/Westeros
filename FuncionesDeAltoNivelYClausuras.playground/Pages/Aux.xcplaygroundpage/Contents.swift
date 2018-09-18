@@ -13,6 +13,20 @@ func imprimirPorConsola(_ mensaje: String) {
 imprimirPorConsola(str)
 
 
+protocol MyProtocol {
+    // Lo que sea aqui
+}
+
+class MyClass: MyProtocol {
+    // Cosas aqui
+}
+
+let object: String  = "sjhfljsadhflajshdf"
+
+extension String: MyProtocol {}
+
+let prot: MyProtocol = "akjdghfskjdhfk"
+
 
 
 
