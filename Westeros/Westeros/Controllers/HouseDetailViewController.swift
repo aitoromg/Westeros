@@ -11,7 +11,7 @@ import UIKit
 class HouseDetailViewController: UIViewController {
 
     // MARK: - Properties
-    let model: House
+    var model: House
     
     // MARK: - Outlets
     @IBOutlet weak var houseNameLabel: UILabel!
@@ -53,6 +53,7 @@ class HouseDetailViewController: UIViewController {
         houseNameLabel.text = "House \(model.name)"
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
+        title = model.name
     }
     
     func setupUI() {
@@ -78,4 +79,14 @@ class HouseDetailViewController: UIViewController {
         // Push
         navigationController?.pushViewController(memberListViewController, animated: true)
     }
+}
+
+extension HouseDetailViewController: HouseListViewControllerDelegate {
+    func houseListViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
+        self.model = house
+        syncModelWithView()
+        
+    }
+    
+    
 }
