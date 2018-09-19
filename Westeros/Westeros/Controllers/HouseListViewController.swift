@@ -72,16 +72,44 @@ class HouseListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Averiguar la casa en cuestion
-        let house = model[indexPath.row]
+        let theHouse = house(at: indexPath.row)
         
         // SIEMPRE emitir la informacion a traves de los dos metodos: delegates y notifications
         // Avisar/Informar al delegado
-        delegate?.houseListViewController(self, didSelectHouse: house)
+        delegate?.houseListViewController(self, didSelectHouse: theHouse)
         
         // Enviar una notificacion
         let nc = NotificationCenter.default
-        let notification = Notification(name: Notification.Name(HouseDidChangeNotificationName), object: self,
-                                        userInfo: [HouseKey : house])
+        let notification = Notification(name: .houseDidChangeNotification, object: self,
+                                        userInfo: [Constants.houseKey : theHouse])
         nc.post(notification)
+        
+        // Guardamos la ultima casa seleccionada
+        saveLastSelectedHouse(at: indexPath.row)
+    }
+}
+
+// MARK: - Persistence (UserDefauls) Solo sirve para persistir PEQUENAS cantidades de objetos
+// Los objectos tiene que ser sencillos: String, Int, Array, ...
+extension HouseListViewController {
+    func saveLastSelectedHouse(at row: Int) {
+        // Aqui vamos a guardar la ultima casa seleccionada
+        let userDefaults = UserDefaults.standard
+        
+        // Lo insertamos en el diccionario de User Defaults
+        userDefaults.set(row, forKey: Constants.lastHouseKey)
+        
+        // Guardar
+        userDefaults.synchronize() // Por si acaso
+    }
+    
+    func lastSelectedHouse() -> House {
+        // Averiguar cual es la ultima row seleccionada (si la hay)
+        let row = UserDefaults.standard.integer(forKey: Constants.lastHouseKey) // Value 0 es el default
+        return house(at: row)
+    }
+    
+    func house(at index: Int) -> House {
+        return model[index]
     }
 }

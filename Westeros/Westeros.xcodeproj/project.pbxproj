@@ -30,6 +30,7 @@
 		4B88F82D2149B9F10062C3AA /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F82C2149B9F10062C3AA /* UIViewController+Navigation.swift */; };
 		4B88F82F2149BBF20062C3AA /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F82E2149BBF20062C3AA /* RepositoryTests.swift */; };
 		4B88F8322149BCBB0062C3AA /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F8312149BCBB0062C3AA /* Respository.swift */; };
+		4BCE76C72152DACB00EF4D45 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE76C62152DACB00EF4D45 /* Notification+Name.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		4B88F82E2149BBF20062C3AA /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		4B88F8312149BCBB0062C3AA /* Respository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
 		4B88F8332149C4040062C3AA /* FuncionesDeAltoNivelYClausuras.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FuncionesDeAltoNivelYClausuras.playground; path = ../FuncionesDeAltoNivelYClausuras.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4BCE76C62152DACB00EF4D45 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,12 +163,12 @@
 		4B66C8382149A29800961791 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B422D67215059D000B44286 /* HouseListViewController.swift */,
+				4B422D68215059D000B44286 /* HouseListViewController.xib */,
 				4B66C8392149A31E00961791 /* HouseDetailViewController.swift */,
 				4B66C83A2149A31E00961791 /* HouseDetailViewController.xib */,
 				4B422D632150336A00B44286 /* WikiViewController.swift */,
 				4B422D642150336A00B44286 /* WikiViewController.xib */,
-				4B422D67215059D000B44286 /* HouseListViewController.swift */,
-				4B422D68215059D000B44286 /* HouseListViewController.xib */,
 				4B422D6B215189A300B44286 /* MemberListViewController.swift */,
 				4B422D6C215189A300B44286 /* MemberListViewController.xib */,
 			);
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				4B88F82C2149B9F10062C3AA /* UIViewController+Navigation.swift */,
+				4BCE76C62152DACB00EF4D45 /* Notification+Name.swift */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				4B66C83B2149A31E00961791 /* HouseDetailViewController.swift in Sources */,
 				4B88F8322149BCBB0062C3AA /* Respository.swift in Sources */,
 				4B2650F52141C21800369C82 /* Sigil.swift in Sources */,
+				4BCE76C72152DACB00EF4D45 /* Notification+Name.swift in Sources */,
 				4B422D6D215189A300B44286 /* MemberListViewController.swift in Sources */,
 				4B2650F32141BD9300369C82 /* House.swift in Sources */,
 				4B2650D02141B36600369C82 /* AppDelegate.swift in Sources */,

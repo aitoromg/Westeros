@@ -28,6 +28,16 @@ extension String: MyProtocol {}
 let prot: MyProtocol = "akjdghfskjdhfk"
 
 
+enum Constants {
+    static let houseDidChangeNotificationName = "HouseDidChange"
+    static let houseKey = "HouseKey"
+    static let lastHouseKey = "lastHouseKey"
+}
+
+let a = Constants.HouseDidChangeNotificationName
+let b = Constants.lastHouseKey
+
+let c = Contants()
 
 
 //: [Next](@next)
