@@ -31,6 +31,10 @@
 		4B88F82F2149BBF20062C3AA /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F82E2149BBF20062C3AA /* RepositoryTests.swift */; };
 		4B88F8322149BCBB0062C3AA /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B88F8312149BCBB0062C3AA /* Respository.swift */; };
 		4BCE76C72152DACB00EF4D45 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE76C62152DACB00EF4D45 /* Notification+Name.swift */; };
+		DC302CFD215AA33D00A1436F /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC302CFC215AA33D00A1436F /* Season.swift */; };
+		DC302CFF215AA53900A1436F /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC302CFE215AA53900A1436F /* Episode.swift */; };
+		DC302D01215AA83900A1436F /* SeasonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC302D00215AA83900A1436F /* SeasonTests.swift */; };
+		DC302D03215AA85600A1436F /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC302D02215AA85600A1436F /* EpisodeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		4B88F8312149BCBB0062C3AA /* Respository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
 		4B88F8332149C4040062C3AA /* FuncionesDeAltoNivelYClausuras.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = FuncionesDeAltoNivelYClausuras.playground; path = ../FuncionesDeAltoNivelYClausuras.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4BCE76C62152DACB00EF4D45 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		DC302CFC215AA33D00A1436F /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		DC302CFE215AA53900A1436F /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		DC302D00215AA83900A1436F /* SeasonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonTests.swift; sourceTree = "<group>"; };
+		DC302D02215AA85600A1436F /* EpisodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				4B2650E62141B36700369C82 /* Info.plist */,
+				DC302D00215AA83900A1436F /* SeasonTests.swift */,
+				DC302D02215AA85600A1436F /* EpisodeTests.swift */,
 				4B2650EF2141BBE300369C82 /* HouseTests.swift */,
 				4B2650F62141C8C400369C82 /* PersonTests.swift */,
 				4B88F82E2149BBF20062C3AA /* RepositoryTests.swift */,
@@ -143,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				4B88F8302149BCA90062C3AA /* Repositories */,
+				DC302CFC215AA33D00A1436F /* Season.swift */,
+				DC302CFE215AA53900A1436F /* Episode.swift */,
 				4B2650F22141BD9300369C82 /* House.swift */,
 				4B2650F42141C21800369C82 /* Sigil.swift */,
 				4B2650F82141C91100369C82 /* Person.swift */,
@@ -308,6 +320,8 @@
 				4BCE76C72152DACB00EF4D45 /* Notification+Name.swift in Sources */,
 				4B422D6D215189A300B44286 /* MemberListViewController.swift in Sources */,
 				4B2650F32141BD9300369C82 /* House.swift in Sources */,
+				DC302CFD215AA33D00A1436F /* Season.swift in Sources */,
+				DC302CFF215AA53900A1436F /* Episode.swift in Sources */,
 				4B2650D02141B36600369C82 /* AppDelegate.swift in Sources */,
 				4B422D652150336A00B44286 /* WikiViewController.swift in Sources */,
 				4B2650F92141C91100369C82 /* Person.swift in Sources */,
@@ -319,8 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC302D01215AA83900A1436F /* SeasonTests.swift in Sources */,
 				4B2650F02141BBE300369C82 /* HouseTests.swift in Sources */,
 				4B2650F72141C8C400369C82 /* PersonTests.swift in Sources */,
+				DC302D03215AA85600A1436F /* EpisodeTests.swift in Sources */,
 				4B88F82F2149BBF20062C3AA /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,13 +484,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DEVELOPMENT_TEAM = R3QW7ETA8S;
 				INFOPLIST_FILE = Westeros/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Westeros;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aitoromg.Westeros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,13 +502,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DEVELOPMENT_TEAM = R3QW7ETA8S;
 				INFOPLIST_FILE = Westeros/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Westeros;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aitoromg.Westeros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
