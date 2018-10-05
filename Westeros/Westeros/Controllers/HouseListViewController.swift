@@ -27,7 +27,7 @@ class HouseListViewController: UITableViewController {
     init(model: [House]) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        title = "Westeros"
+        title = "Houses"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -111,5 +111,11 @@ extension HouseListViewController {
     
     func house(at index: Int) -> House {
         return model[index]
+    }
+}
+
+extension HouseListViewController: HouseListViewControllerDelegate {
+    func houseListViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
+        navigationController?.pushViewController(HouseDetailViewController(model: house), animated: true)
     }
 }

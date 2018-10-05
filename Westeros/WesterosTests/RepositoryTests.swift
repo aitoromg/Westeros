@@ -51,4 +51,14 @@ class RepositoryTests: XCTestCase {
         filtered = Repository.local.houses { $0.count == 100 }
         XCTAssertTrue(filtered.isEmpty)
     }
+    
+    func testLocalRepositoryReturnsHousesByNameTypeSafeAndAutocomplete() {
+        let stark = Repository.local.house(named: .stark)
+        XCTAssertEqual(stark?.name, "Stark")
+        
+        let lannister = Repository.local.house(named: .lannister)
+        XCTAssertEqual(lannister?.name, "Lannister")
+        
+        XCTAssertNotEqual(stark?.name, lannister?.name)
+    }
 }

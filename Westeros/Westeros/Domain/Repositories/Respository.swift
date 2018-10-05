@@ -21,6 +21,8 @@ protocol HouseFactory {
     func house(named: String) -> House?
     
     func houses(filteredBy filter: Filter) -> [House]
+    
+    func house(named: HouseName) -> House?
 }
 
 protocol SeasonFactory {
@@ -76,6 +78,10 @@ final class LocalFactory: HouseFactory, SeasonFactory {
         return houses.filter(filteredBy)
     }
     
+    func house(named name: HouseName) -> House? {
+        return house(named: name.rawValue)
+    }
+    
     var seasons: [Season] {
         
         // Seasons creation here
@@ -113,7 +119,7 @@ final class LocalFactory: HouseFactory, SeasonFactory {
         seventhSeason.add(episodes: firstEpisodeOfSeventhSeason, secondEpisodeOfSeventhSeason)
         
         
-        return [firstSeason, secondSeason, thirdSeason, fourthSeason, fifthSeason, sixthSeason, seventhSeason].sorted()
+        return [firstSeason, secondSeason, thirdSeason, fourthSeason, fifthSeason, sixthSeason, seventhSeason].sorted(by: { $0.releaseDate.compare($1.releaseDate) == .orderedAscending })
     }
     
     func season(named name: String) -> Season? {

@@ -14,13 +14,15 @@ class MemberListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // Mark: - Properties
-    let model: [Person]
+    var model: [Person]
     
     // Mark: - Initialization
     init(model: [Person]) {
         self.model = model
         
         super.init(nibName: nil, bundle: nil)
+        
+        self.title = "Members"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,6 +34,25 @@ class MemberListViewController: UIViewController {
         super.viewDidLoad()
         // FUNDAMENTAL!!! No olvidarse de contar al tableview quienes son sus ayudantes (datasource y delegate)
         tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(houseDidChange), name: .houseDidChangeNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func houseDidChange(notification: Notification) {
+        guard let info = notification.userInfo else { return }
+        guard let house: House = info[Constants.houseKey] as? House else { return }
+        model = house.sortedMembers
+        
+        tableView.reloadData()
     }
 }
 
@@ -45,7 +66,7 @@ extension MemberListViewController: UITableViewDataSource {
         let cellId = "PersonCell"
         
         // Descubrimos cual es la Person que hay que mostrar
-        let person = model[indexPath.row]
+        let person = member(at: indexPath.row)
         
         // Creamos la celda (o nos la dan de cache)
         var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
@@ -60,3 +81,22 @@ extension MemberListViewController: UITableViewDataSource {
         return cell!
     }
 }
+
+extension MemberListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let person = member(at: indexPath.row)
+        navigationController?.pushViewController(MemberDetailViewController(model: person), animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+}
+
+extension MemberListViewController {
+    func member(at row: Int) -> Person {
+        return model[row]
+    }
+}
+
+

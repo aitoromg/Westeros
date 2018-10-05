@@ -16,7 +16,7 @@ final class Season {
     private var _episodes: Episodes
     
     var sortedEpisodes: [Episode] {
-        return _episodes.sorted()
+        return _episodes.sorted(by: { $0.issueDate.compare($1.issueDate) == .orderedAscending })
     }
     
     // Mark: - Initialization
